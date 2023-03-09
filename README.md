@@ -28,22 +28,22 @@ XAMP/MySQL/PHP
 
 ## 補足
 個人情報保護のためGithubからのログイン、パスワードリセット時のメールの送信ができません。
-
+　
 
 (Githubユーザーでのログイン(API連携))
 
-GITHUB_CLIENT_ID (GithubのID)
+　GITHUB_CLIENT_ID (GithubのID)
 
-GITHUB_CLIENT_SECRET (GithubのClient secrets)
+　GITHUB_CLIENT_SECRET (GithubのClient secrets)
 
 (パスワードリセット時のメールの送信)
 
-MAIL_USERNAME (メールアドレス)
+　MAIL_USERNAME (メールアドレス)
 
-MAIL_PASSWORD (アプリパスワードを取得して入力)
+　MAIL_PASSWORD (アプリパスワードを取得して入力)
 
-MAIL_FROM_ADDRESS (MAIL_USERNAMEと同じものを入力)
-
+　MAIL_FROM_ADDRESS (MAIL_USERNAMEと同じものを入力)
+　
 
 .envの上記の項目に任意の値を入れて確認をお願いします。
 
