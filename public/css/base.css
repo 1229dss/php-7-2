@@ -1,0 +1,872 @@
+@charset "UTF-8";
+
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* 上の部分は気にせずここから書く */
+/* 共通 */
+html {
+    background-color: rgb(180 180 180 / 30%);
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+section {
+	width: 90%;
+	margin: auto;
+
+}
+a {
+	color: rgb(0, 102, 255);
+}
+h1 {
+	display: inline-block;
+	text-align: left;
+	margin-bottom: 50px;
+	text-decoration: none;
+	font-weight: bold;
+	border-left:  18px solid rgb(194, 144, 0);
+	border-bottom: 3px solid rgb(194, 144, 0);
+	letter-spacing: 10px;
+	width: 30%;
+	padding: 5px 1%;
+	font-size: 25px;
+}
+h2 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+	text-decoration: underline ;
+}
+h3 {
+	font-weight: bold;
+	margin-top: 25px;
+}
+textarea {
+	resize: none;
+}
+.btn_area {
+	display: flex;
+	justify-content: space-between;
+}
+.btn {
+	text-align: center;
+	display: block;
+	width: 30%;
+	margin: auto;
+	margin-top: 30px;
+	background-color: rgb(194, 144, 0);
+	color: white;
+	padding: 1% 0;
+	cursor: pointer;
+	border: 2px rgb(194, 144, 0) solid;
+	border-radius: 100px;
+	font-size: 16px;
+}
+.btn_back {
+	text-align: center;
+	display: block;
+	width: 30%;
+	margin: auto;
+	margin-top: 30px;
+	color: rgb(194, 144, 0);
+	background-color: white;
+	padding: 1% 0;
+	cursor: pointer;
+	border: 2px rgb(194, 144, 0) solid;
+	border-radius: 100px;
+	font-size: 16px;
+}
+.primary {
+	font-weight: normal;
+	font-size: small;
+	color: red;
+}
+.underline {
+	text-decoration: underline;
+}
+.font-weight {
+	font-weight: bold;
+}
+.responsive_add {
+	display: none;
+}
+/* ヘッダー */
+header {
+	height: 80px;
+	background-color: rgb(0, 0, 0);
+	margin-bottom: 50px;
+}
+.header_area {
+	flex: auto;
+	display: flex;
+	height: 80px;
+	align-items: center;
+}
+.nav-01 {
+	flex: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    line-height: 50px;
+}
+.nav-inner {
+	margin-right: 25px;
+	margin-left: 25px;
+}
+.nav_link {
+	color: white;
+}
+.logo {
+	object-fit: cover;
+	height: 20vh;
+}
+.loggingIn {
+	flex-basis:100%;
+	height: 30px;
+}
+.loggingIn_text {
+	color: white;
+    text-align: right;
+	color: rgb(167, 167, 167);
+	font-size: small;
+	margin-right: 25px;
+}
+.nav-02 {
+	display: none;
+	position: absolute;
+	top: 80px;
+	right: 10px;
+	background-color: #545454;
+	border-radius: 10px;
+}
+.nav-02-active {
+	display: block;
+}
+.menu {
+	display: none;
+	background-color: white;
+	padding: 5px;
+	border-radius: 100%;
+	position: relative;
+}
+.menu img {
+	object-fit: cover;
+	width: 35px;
+}
+/* top.php */
+.document_area {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.document {
+	background-color: white;
+	width:450px;
+	border: solid 1px rgb(128, 128, 128);
+	padding-top: 1%;
+	border-radius: 10px;
+}
+.document_img {
+	margin: auto;
+	object-fit: cover;
+	height: 30vh;
+	border: solid 0.5px;
+	margin-bottom: 5%;
+}
+.document a {
+	text-align: center;
+	font-weight: bold;
+	color: black;
+}
+.document_text {
+	display: block;
+	background-color: rgb(253, 246, 181);
+	padding: 10px 80px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.text_bg {
+	background-image: url(../img/1.png);
+	background-size: cover;
+    background-position: center;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+	padding: 2%;
+	position: relative;
+}
+.text_bg::before {
+	content: '';
+	background-color: rgba(0,0,0,.4);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+}
+.text {
+	background-color: rgb(255, 255, 255);
+	opacity: 0.8;
+	padding: 10px 20px;
+	width: 95%;
+	font-size: 17px;
+	margin: auto;
+}
+
+/* login.php/sign.php */
+.form_default {
+	width: 40%;
+    margin:auto;
+	padding: 2%;
+    border-radius: 16px;
+    border: 2px solid #f1c2a08a;
+    border: 2px solid #b591788a;
+
+    background-color: white;
+}
+input {
+	width: 100%;
+}
+.login_link_area {
+	width: 40%;
+    margin:auto;
+	padding: 2%;
+}
+.login_link_area p {
+	margin-bottom: 5px;
+}
+/* resume_create.php */
+.create_area {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+.create_area a {
+	color: black;
+}
+.create_heading {
+	width: 220px;
+	margin: auto;
+	margin-bottom: 30px;
+	text-decoration: none;
+	border-left: 3px solid rgb(194, 144, 0);
+	border-right:  3px solid rgb(194, 144, 0);
+	padding: 5px 0;
+	border-radius: 100px;
+	font-size: 23px;
+}
+.entry_field {
+	width: 80%;
+	margin: auto;
+    border: 1px solid #545454;
+	padding: 2%;
+    background-color: white;
+}
+#title {
+	width: 30%;
+}
+#date {
+	width: 20%;
+}
+.primary_name {
+	width: 20%;
+}
+#kana_name {
+	width: 20%;
+}
+#birth {
+	width: 20%;
+}
+#sex {
+	width: auto;
+}
+#post_code, #post_code_spare {
+	width: 20%;
+}
+#tel, #tel_spare {
+	width: 20%;
+}
+.email {
+	width: 20%;
+}
+.educational_background_date {
+	width: 10%;
+}
+.educational_background {
+	width: 40%;
+}
+.work_history_date {
+	width: 10%;
+}
+.work_history {
+	width: 40%;
+}
+.licence_date {
+	width: 10%;
+}
+.licence {
+	width: 40%;
+}
+#motivation {
+	width: 100%;
+	height: 130px;
+}
+#remarks {
+	width: 100%;
+	height: 80px;
+}
+#career {
+	width: 100%;
+	height: 80px;
+}
+.subtitle {
+	font-size: small;
+	margin-bottom: 5px;
+}
+.subtitle_input1 {
+	width: 30%;
+	margin: 0 2px;
+}
+.subtitle_input2 {
+	width: 25%;
+	margin: 0 2px;
+}
+.subtitle_input3 {
+	width: 15%;
+	margin: 0 2px;
+}
+.subtitle_input4 {
+	width: 100%;
+	height: 150px;
+}
+#skill {
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+#licence {
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+.placeholder_wrapper {
+	position: relative;
+
+}
+#placeholder {
+	color: gray;
+	font-size: small;
+	position: absolute;
+	top: 0;
+}
+.none {
+	display: none;
+}
+#summary {
+	width: 100%;
+	height: 150px;
+}
+.fa-square-plus {
+	margin-top: 10px;
+	cursor: pointer;
+}
+.spare {
+	margin: 0;
+}
+.addition_display_bg {
+	background-color: rgb(241, 241, 217);
+	padding: 10px;
+}
+.addition_display_spare_area{
+	border: #dedede solid 2px;
+    border-radius: 15px;
+	padding: 1%;
+	background-color: rgb(241, 241, 217);
+}
+.addition_display_area {
+	border: #dedede solid 2px;
+    border-radius: 15px;
+	padding: 1%;
+}
+.required_display_area, .addition_display2, .addition_display4, .addition_display6,
+.addition_display8, .addition_display10,
+.addition_display12, .addition_display14, .addition_display17, .addition_display19 {
+	padding: 0 10px;
+
+}
+
+/* main.php */
+table {
+	width: 100%;
+	margin: auto;
+	background-color: white;
+}
+tr:nth-child(odd) td {
+	background-color: rgb(241, 241, 217);
+}
+thead tr th {
+	font-weight: bold;
+}
+th, td {
+	border: solid 1px;
+	text-align: center;
+
+}
+.resume_heading, .experience_heading {
+	display: inline-block;
+	text-align: left;
+	margin-left: 2%;
+	margin-top: 50px;
+	text-decoration: none;
+	border-left: 8px solid rgb(194, 144, 0);
+	border-bottom:  3px dotted rgb(194, 144, 0);
+	padding: 5px 1%;
+	font-size: 20px;
+}
+.table_area {
+    border: 2px solid #b591788a;
+    border-radius: 15px;
+	padding: 1%;
+	width: 95%;
+	margin: auto;
+}
+.main_page_link{
+	text-align: center;
+}
+.main_page_link .pagination {
+	margin-top: 20px;
+	border-bottom: solid 3px rgb(167, 167, 167);
+}
+.main_page_link nav {
+	display: inline-block;
+}
+.main_page_link .pagination a,  .main_page_link .page-link{
+	font-size: 14px;
+}
+.primary_msg {
+	color: red;
+	font-size: large;
+	text-align: center;
+}
+/* list.php */
+.search_area {
+	width: 80%;
+    margin:auto;
+	margin-bottom: 60px;
+    border-radius: 16px;
+	padding: 0.5%;
+    border: 1px solid #b591788a;
+    background-color: white;
+}
+.search {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+	margin: auto;
+}
+.search_btn {
+	display: block;
+	width: 15%;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	background-color: rgb(195, 147, 4);
+	color: white;
+	cursor: pointer;
+	border: none;
+	border-radius: 100px;
+	font-size: 16px;
+}
+.list_heading {
+	display: inline-block;
+	text-align: left;
+	margin-left: 6%;
+	margin-top: 10px;
+	text-decoration: none;
+	border-left: 8px solid rgb(194, 144, 0);
+	border-bottom:  3px dotted rgb(194, 144, 0);
+	padding: 5px 1%;
+	font-size: 20px;
+}
+.user_info_area {
+	margin: auto;
+	margin-bottom: 40px;
+	border: solid 1px;
+	padding: 15px;
+    background-color: white;
+	width: 80%;
+	position: relative;
+}
+.user_info {
+	display: flex;
+	margin: 10px 0 5px;
+
+}
+.user_info_secondary {
+	margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+}
+.user_info_user_name {
+	font-size: 18px;
+	text-decoration: underline;
+}
+.user_info_summary, .user_info_motivation {
+	margin: 5px 0 10px;
+	border: #dedede solid 2px;
+    border-radius: 15px;
+	background-color: rgba(253, 246, 199, 0.875);
+	padding: 0.5%;
+
+}
+.user_info_summary_heading, .user_info_motivation_heading {
+	display: flex;
+	padding: 0.5% 0 0 0.5%;
+}
+.user_info_desirable, .user_info_previous {
+	margin-left: 20px;
+}
+.user_info_motivation_content, .user_info_summary_content {
+	padding: 0.5% 1% 1% 1.5%;
+}
+.list_detail_btn {
+	text-align: center;
+	margin: 5px 0;
+}
+.like_area {
+	position: absolute;
+	right: 30px;
+	top: 60px;
+}
+.list_like {
+	border-bottom: solid 3px rgba(220, 151, 151, 0.72);
+	padding: 0px 3px;
+	margin-right: 50px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.list_page_link{
+	text-align: center;
+}
+.list_page_link .pagination {
+	margin-top: 40px;
+	border-bottom: solid 3px rgb(167, 167, 167);
+}
+.list_page_link nav {
+	display: inline-block;
+}
+/* list_detail.php */
+.list_detail_heading {
+	display: inline-block;
+	text-align: left;
+	margin-left: 8%;
+	text-decoration: none;
+	border-left: 8px solid rgb(194, 144, 0);
+	border-bottom:  3px dotted rgb(194, 144, 0);
+	padding: 5px 1%;
+	font-size: 23px;
+}
+.list_detail_area {
+	background-color: white;
+	border: #dedede solid 2px;
+    border-radius: 15px;
+	padding: 1.5%;
+	width: 80%;
+}
+.list_detail_user_info {
+	display: flex;
+	justify-content: space-between;
+}
+.like {
+	border: solid 1px;
+	padding: 2px 5px;
+	margin-right: 50px;
+	cursor: pointer;
+}
+.btn_back_list {
+	text-align: center;
+	display: block;
+	width: 20%;
+	margin: auto;
+	margin-top: 20px;
+	color: rgb(194, 144, 0);
+	background-color: white;
+	padding: 0.5% 0;
+	cursor: pointer;
+	border: 2px rgb(194, 144, 0) solid;
+	border-radius: 100px;
+	font-size: 16px;
+}
+.liked {
+	background-color: rgba(220, 151, 151, 0.72);
+}
+/* フッター */
+footer {
+	margin-top: 50px;
+	height: 40px;
+	background-color: rgb(0, 0, 0);
+	position: relative;
+}
+footer p {
+	color: #fff;
+	padding: 5px 0px 5px 20px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* ページ切り替え */
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+.pagination li {
+	margin: 0 10px;
+}
+.pagination a {
+	padding: 3px;
+	color: black;
+}
+.pagination a:hover {
+	background-color: rgb(194, 144, 0);
+}
+
+@media (max-width:1100px){
+	.search {
+		display: block;
+		width: 70%;
+	}
+}
+
+@media (max-width:1000px){
+	/* グローバルナビゲーション */
+	.nav-01 {
+		display: none;
+	}
+	.header_area {
+		justify-content: space-between;
+	}
+	.menu {
+		display: block;
+	}
+	.document_area, .create_area{
+		display: block;
+	}
+	.document {
+		margin: auto;
+		margin-bottom: 30px;
+		width: 90%;
+	}
+	.form_default {
+		width: 60%;
+	}
+	.login_link_area {
+		width: 60%;
+	}
+
+	/* create */
+	#title {
+		width: 100%;
+	}
+	#date {
+		width: 100%;
+	}
+	.primary_name {
+		width: 100%;
+	}
+	#kana_name {
+		width: 100%;
+	}
+	#birth {
+		width: 100%;
+	}
+	#post_code, #post_code_spare {
+		width: 100%;
+	}
+	#tel, #tel_spare {
+		width: 100%;
+	}
+	.email {
+		width: 100%;
+	}
+	#motivation {
+		width: 100%;
+		height: 130px;
+	}
+	#remarks {
+		width: 100%;
+		height: 80px;
+	}
+	#career {
+		width: 100%;
+		height: 80px;
+	}
+	.like_area {
+		display: none;	
+	}
+	.responsive_add {
+		display: block;
+		margin: 1% 0;
+	}
+}
+
+@media (max-width:650px){
+	h1 {
+		width: auto;
+	}
+	/* create */
+	.addition_display_area label {
+		display: block;
+	}
+	.educational_background_date {
+		width: 30%;
+	}
+	.educational_background {
+		width: 100%;
+		margin-bottom: 5%;
+	}
+	.work_history_date {
+		width: 30%;
+	}
+	.work_history {
+		width: 100%;
+		margin-bottom: 5%;
+	}
+	.licence_date {
+		width: 30%;
+	}
+	.licence {
+		width: 100%;
+	}
+
+	.addition_display_area .subtitle label {
+		margin-bottom: 1%;
+	}
+	.subtitle_input1 {
+		width: 60%;
+		margin: 0 2px;
+	}
+	.subtitle_input2 {
+		width: 60%;
+		margin: 0 2px;
+	}
+	.subtitle_input3 {
+		width: 60%;
+		margin: 0 2px;
+	}
+	.user_info {
+		display: block;
+	}
+	.user_info_desirable, .user_info_previous {
+		margin-left: 0;
+	}
+	.user_info_summary_heading, .user_info_motivation_heading {
+		display: block;
+	}
+}
+
+@media (max-width:500px){
+	.logo {
+		height: 15vh;
+	}
+	.menu img {
+		width: 25px;
+	}
+	.document_img {
+		display: none;
+	}
+	.text_bg {
+		height: auto;
+	}
+	.form_default {
+		width: 80%;
+		font-style: 14px;
+	}
+	.btn_area .btn, .btn_area .btn_back{
+		font-size: 12px;
+	}
+	.responsive_none {
+		display: none;
+	}
+	.search {
+		width: 80%;
+	}
+	.search_btn {
+		width: 25%;
+	}
+
+}
+@media (max-width:900px){
+	.user_info_secondary {
+		display: block;
+	}
+}
+@media (max-width:720px){
+	.search {
+		width: 80%;
+	}
+	.list_detail_user_info {
+		display: block;
+	}
+	.like {
+		margin-right: 0px;
+		margin: 10px 0;
+		width: 170px;
+	}
+	.btn_area .responsive_btn{
+		width: 40%;
+		font-size: 12px;
+
+	}
+}
+@media (max-width:630px){
+	.search {
+		width: 80%;
+		margin-left: 20%;
+	}
+}
